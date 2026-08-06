@@ -28,9 +28,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     images: [
-      'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1000&q=80'
+      'image: "/images/women/001.jpg"',
     ],
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-fashion-model-in-a-long-coat-41525-large.mp4',
     descriptionEn: 'Long coat made of a spun cotton blend. Featuring a lapel collar, long sleeves with tab details on the shoulders, front welt pockets, and belt in the same fabric. Double-breasted button fastening at the front.',
@@ -67,8 +65,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['48', '50', '52', '54', '56'],
     images: [
-      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1000&q=80'
+      'image: "/images/women/002.jpg"',
     ],
     descriptionEn: 'Blazer made of structured fabric. Peak lapels, buttoned cuffs, chest welt pocket, and flap pockets at the hip. Double-breasted button fastening.',
     descriptionAr: 'بليزر مصنوع من قماش محبوك بقوام بارز. ياقة حادة، وأطراف أكمام بأزرار، وجيب بحاشية على الصدر، وجيوب بقلاب عند الورك. إغلاق زر مزدوج الصدر.',
@@ -104,8 +101,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['ONE SIZE'],
     images: [
-      'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=1000&q=80'
+      'image: "/images/women/003.jpg"',
     ],
     descriptionEn: 'Real bovine leather city bag. Main compartment with metallic zip closure and magnetic flap over. Tubular top handles and adjustable detachable strap.',
     descriptionAr: 'حقيبة مدنيّة من الجلد البقري الطبيعي. مقصورة رئيسية بإنهاء معدني وسحاب علوي. مقابض دائرية أنيقة وحزام كتف قابل للتعديل والإزالة.',
@@ -214,8 +210,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['6-7 YRS', '8-9 YRS', '10-11 YRS', '12-14 YRS'],
     images: [
-      'https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1000&q=80'
+      'image: "D:\zara-main/images/kids/006.jpg"',
     ],
     descriptionEn: 'Loose fit crewneck sweatshirt made of soft brush-back heavyweight cotton. Ribbed trims on collar, cuffs, and hem.',
     descriptionAr: 'سويت شيرت بياقة مستديرة وقصة مريحة مصنوع من القطن الثقيل الناعم جداً. أطراف مضلعة على الياقة والأكمام.',
@@ -252,9 +247,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['XS', 'S', 'M', 'L'],
     images: [
-      'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=80'
-    ],
+      'image: "/images/kids/007.jpg"',  
+      ],
     descriptionEn: 'Midi slip dress featuring a straight neckline and thin crossover shoulder straps. Side slit at the hem.',
     descriptionAr: 'فستان ميدي انسيابي بياقة مستقيمة وحمالات كتف متقاطعة رفيعة. فتحة جانبية أنيقة عند الحاشية السفليّة.',
     compositionEn: '100% Polyester Satin Finish.',
