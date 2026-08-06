@@ -3,7 +3,7 @@ import { Language } from '../types';
 export const translations = {
   en: {
     // Brand & General
-    brandName: 'ZARA',
+    brandName: 'Z',
     brandTagline: 'EXCLUSIVE COLLECTION',
     currencySymbol: 'EGP',
     searchPlaceholder: 'Search for coat, leather bag, suit, perfume...',
