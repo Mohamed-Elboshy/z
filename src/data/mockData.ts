@@ -247,7 +247,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['XS', 'S', 'M', 'L'],
     images: [
-      'images: "/images/kids/007.jpg"'    ],
+           "/images/kids/007.jpg"  ],
     descriptionEn: 'Midi slip dress featuring a straight neckline and thin crossover shoulder straps. Side slit at the hem.',
     descriptionAr: 'فستان ميدي انسيابي بياقة مستقيمة وحمالات كتف متقاطعة رفيعة. فتحة جانبية أنيقة عند الحاشية السفليّة.',
     compositionEn: '100% Polyester Satin Finish.',
