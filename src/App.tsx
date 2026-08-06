@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ScrollControls } from './components/common/ScrollControls';
 import { VelvetBackground } from './components/common/VelvetBackground';
 import { TracingBeam } from './components/common/TracingBeam';
+import { cubicBezier } from 'motion';
 
 // Layout & Overlays
 import { Navbar } from './components/layout/Navbar';
@@ -34,9 +35,28 @@ import { PolicyPage } from './pages/PolicyPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 const pageVariants = {
-  initial: { opacity: 0, y: 8 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] } },
-  exit: { opacity: 0, y: -8, transition: { duration: 0.25, ease: [0.7, 0, 0.84, 0] } }
+  initial: {
+    opacity: 0,
+    y: 8
+  },
+
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.35,
+      ease: cubicBezier(0.16, 1, 0.3, 1)
+    }
+  },
+
+  exit: {
+    opacity: 0,
+    y: -8,
+    transition: {
+      duration: 0.25,
+      ease: cubicBezier(0.7, 0, 0.84, 0)
+    }
+  }
 };
 
 const AppContent: React.FC = () => {
@@ -102,7 +122,7 @@ const AppContent: React.FC = () => {
                 exit="exit"
                 variants={pageVariants}
                 className="w-full"
-              >
+                >
                 {renderCurrentPage()}
               </motion.div>
             </AnimatePresence>

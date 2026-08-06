@@ -41,8 +41,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="group relative flex flex-col surface-panel border border-white/10 shadow-[0_30px_90px_-55px_rgba(0,0,0,0.7)] transition-all duration-300 hover:shadow-[0_36px_120px_-65px_rgba(0,0,0,0.85)] hover:-translate-y-0.5 w-full backdrop-blur-xl"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onTouchStart={() => setIsHovered(true)}
+            onTouchEnd={() => setIsHovered(false)}
         >
           {/* Product Image Stage with 3D Z-Depth */}
           <CardItem translateZ={30} className="w-full">

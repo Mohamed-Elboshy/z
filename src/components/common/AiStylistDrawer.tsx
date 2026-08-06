@@ -34,11 +34,11 @@ export const AiStylistDrawer: React.FC = () => {
         id="ai-stylist-launcher"
         onClick={() => setIsAiChatOpen(true)}
         className="fixed bottom-6 right-6 z-40 bg-black text-white dark:bg-white dark:text-black p-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2 group cursor-pointer border border-white/20"
-        title={language === 'ar' ? 'المساعد الذكي لـ ZARA' : 'ZARA AI Personal Stylist'}
+        title={language === 'ar' ? 'مساعد ZARA' : 'ZARA Assistant'}
       >
         <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
         <span className="text-xs font-mono uppercase tracking-widest hidden sm:inline group-hover:block font-bold">
-          {language === 'ar' ? 'منسق الأزياء الذكي' : 'AI STYLIST'}
+          {language === 'ar' ? 'مساعد الأزياء' : 'STYLE ASSISTANT'}
         </span>
       </button>
     );
@@ -56,10 +56,10 @@ export const AiStylistDrawer: React.FC = () => {
             </div>
             <div>
               <h3 className="text-sm font-serif font-bold uppercase tracking-widest text-black dark:text-white">
-                {language === 'ar' ? 'منسق الأزياء الذكي ZARA AI' : 'ZARA AI CLIENT ADVISOR'}
+                {language === 'ar' ? 'مساعد أزياء ZARA': 'ZARA STYLE ADVISOR'}
               </h3>
               <p className="text-[10px] font-sans text-zinc-500 uppercase tracking-wider">
-                {language === 'ar' ? 'مدعوم بالذكاء الاصطناعي الفائق' : 'Powered by Gemini Intelligence'}
+                {language === 'ar'? 'مساعد التسوق': 'Shopping Assistant'}
               </p>
             </div>
           </div>
@@ -120,7 +120,7 @@ export const AiStylistDrawer: React.FC = () => {
           {isLoading && (
             <div className="flex gap-3 items-center text-zinc-500 text-xs italic">
               <Sparkles className="w-4 h-4 animate-spin text-amber-500" />
-              <span>{language === 'ar' ? 'جارٍ تحليل أحدث صيحات ZARA...' : 'Analyzing ZARA editorial looks...'}</span>
+              <span>{language === 'ar' ? 'جارٍ تجهيز الاقتراحات...' : 'Preparing recommendations...'}</span>
             </div>
           )}
         </div>

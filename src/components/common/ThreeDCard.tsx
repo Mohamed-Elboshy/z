@@ -49,6 +49,20 @@ export const CardContainer = ({
           onMouseEnter={handleMouseEnter}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
+          onTouchStart={() => setIsMouseEntered(true)}
+          onTouchMove={(e: React.TouchEvent<HTMLDivElement>) => {
+            if (!containerRef.current) return;
+            const touch = e.touches[0];
+            const { left, top, width, height } = containerRef.current.getBoundingClientRect();
+            const x = (touch.clientX - left - width / 2) / 18;
+            const y = (touch.clientY - top - height / 2) / 18;
+            containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
+          }}
+          onTouchEnd={() => {
+            setIsMouseEntered(false);
+            if (!containerRef.current) return;
+            containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
+          }}
           className={`flex items-center justify-center transition-all duration-200 ease-linear ${className}`}
           style={{
             transformStyle: 'preserve-3d'

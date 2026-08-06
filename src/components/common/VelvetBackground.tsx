@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 
 interface VelvetBackgroundProps {
@@ -10,37 +10,56 @@ export const VelvetBackground: React.FC<VelvetBackgroundProps> = ({
   children,
   className = ''
 }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () =>
+      setIsMobile(typeof window !== 'undefined' && window.innerWidth <= 768);
+
+    check();
+
+    window.addEventListener('resize', check);
+
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
   return (
-    <div className={`relative min-h-screen w-full bg-[#040205] text-white transition-colors overflow-hidden ${className}`}>
+    <div
+      className={`relative min-h-screen w-full bg-[#040205] text-white transition-colors overflow-hidden ${className}`}
+    >
       {/* 1. Deep Black Velvet Gradient Base */}
       <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,_rgba(30,6,16,0.85),_rgba(0,0,0,0.1))]" />
 
       {/* 1b. Burgundy Textile Line Overlay */}
-      <div
-        className="pointer-events-none absolute inset-0 z-0 opacity-70"
-        style={{
-          backgroundImage: `linear-gradient(90deg, rgba(147, 24, 45, 0.08) 1px, transparent 1px),
-            linear-gradient(180deg, rgba(147, 24, 45, 0.08) 1px, transparent 1px)`,
-          backgroundSize: '18px 18px, 18px 18px'
-        }}
-      />
-
-      {/* 1c. Soft Velvet Sheen Mesh */}
       <motion.div
-        animate={{
-          opacity: [0.16, 0.28, 0.18, 0.16],
-          backgroundPosition: ['0% 0%', '100% 50%', '50% 100%', '0% 0%']
-        }}
+        animate={
+          isMobile
+            ? {
+                backgroundPosition: ['0% 0%', '50% 50%'],
+                opacity: [0.14, 0.2]
+              }
+            : {
+                backgroundPosition: [
+                  '0% 0%',
+                  '100% 50%',
+                  '50% 100%',
+                  '0% 0%'
+                ],
+                opacity: [0.18, 0.3, 0.22, 0.18]
+              }
+        }
         transition={{
-          duration: 24,
+          duration: isMobile ? 18 : 24,
           repeat: Infinity,
           ease: 'easeInOut'
         }}
         className="pointer-events-none absolute inset-0 z-0 mix-blend-screen"
         style={{
-          backgroundImage: `radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18) 0%, transparent 30%),
+          backgroundImage: `
+            radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18) 0%, transparent 30%),
             radial-gradient(circle at 80% 30%, rgba(255,255,255,0.12) 0%, transparent 25%),
-            radial-gradient(circle at 30% 80%, rgba(255,255,255,0.1) 0%, transparent 22%)`,
+            radial-gradient(circle at 30% 80%, rgba(255,255,255,0.10) 0%, transparent 22%)
+          `,
           backgroundSize: '220% 220%'
         }}
       />
