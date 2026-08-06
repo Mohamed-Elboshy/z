@@ -28,7 +28,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     images: [
-      'images: "/images/women/001.jpg"',
+      'images: "/images/women/001.jpg"'
     ],
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-fashion-model-in-a-long-coat-41525-large.mp4',
     descriptionEn: 'Long coat made of a spun cotton blend. Featuring a lapel collar, long sleeves with tab details on the shoulders, front welt pockets, and belt in the same fabric. Double-breasted button fastening at the front.',
@@ -65,7 +65,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['48', '50', '52', '54', '56'],
     images: [
-      'images: "/images/women/002.jpg"',
+      'images: "/images/women/002.jpg"'
     ],
     descriptionEn: 'Blazer made of structured fabric. Peak lapels, buttoned cuffs, chest welt pocket, and flap pockets at the hip. Double-breasted button fastening.',
     descriptionAr: 'بليزر مصنوع من قماش محبوك بقوام بارز. ياقة حادة، وأطراف أكمام بأزرار، وجيب بحاشية على الصدر، وجيوب بقلاب عند الورك. إغلاق زر مزدوج الصدر.',
@@ -101,7 +101,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['ONE SIZE'],
     images: [
-      'images: "/images/women/003.jpg"',
+      'images: "/images/women/003.jpg"'
     ],
     descriptionEn: 'Real bovine leather city bag. Main compartment with metallic zip closure and magnetic flap over. Tubular top handles and adjustable detachable strap.',
     descriptionAr: 'حقيبة مدنيّة من الجلد البقري الطبيعي. مقصورة رئيسية بإنهاء معدني وسحاب علوي. مقابض دائرية أنيقة وحزام كتف قابل للتعديل والإزالة.',
@@ -210,7 +210,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['6-7 YRS', '8-9 YRS', '10-11 YRS', '12-14 YRS'],
     images: [
-      'images: "/images/kids/006.jpg"',
+      'images: "/images/kids/006.jpg"'
     ],
     descriptionEn: 'Loose fit crewneck sweatshirt made of soft brush-back heavyweight cotton. Ribbed trims on collar, cuffs, and hem.',
     descriptionAr: 'سويت شيرت بياقة مستديرة وقصة مريحة مصنوع من القطن الثقيل الناعم جداً. أطراف مضلعة على الياقة والأكمام.',
@@ -247,7 +247,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['XS', 'S', 'M', 'L'],
     images: [
-      'images: "/images/kids/007.jpg"',    ],
+      'images: "/images/kids/007.jpg"'    ],
     descriptionEn: 'Midi slip dress featuring a straight neckline and thin crossover shoulder straps. Side slit at the hem.',
     descriptionAr: 'فستان ميدي انسيابي بياقة مستقيمة وحمالات كتف متقاطعة رفيعة. فتحة جانبية أنيقة عند الحاشية السفليّة.',
     compositionEn: '100% Polyester Satin Finish.',
