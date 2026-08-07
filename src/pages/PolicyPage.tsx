@@ -12,13 +12,13 @@ export const PolicyPage: React.FC = () => {
         <h1 className="text-3xl font-serif font-bold uppercase tracking-wider text-black dark:text-white">
           POLICIES & LEGAL TERMS
         </h1>
-        <p className="text-zinc-500 mt-1">Zara Egypt Terms of Service, Privacy Policy & Consumer Rights</p>
+        <p className="text-zinc-500 mt-1">Z Egypt Terms of Service, Privacy Policy & Consumer Rights</p>
       </div>
 
       <div className="space-y-4">
         <h2 className="text-sm font-serif font-bold uppercase text-black dark:text-white">1. PRIVACY & DATA SECURITY</h2>
         <p>
-          Zara Egypt respects your privacy. All customer transactions processed via Fawry, InstaPay, Visa, and Meeza adhere to PCI-DSS compliance standards. Personal credentials, phone numbers, and delivery addresses are encrypted.
+          Z Egypt respects your privacy. All customer transactions processed via Fawry, InstaPay, Visa, and Meeza adhere to PCI-DSS compliance standards. Personal credentials, phone numbers, and delivery addresses are encrypted.
         </p>
       </div>
 

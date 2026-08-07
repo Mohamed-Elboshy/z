@@ -24,7 +24,7 @@ export const AboutPage: React.FC = () => {
       <div className="aspect-video bg-black overflow-hidden relative">
         <img
           src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80"
-          alt="Zara Egypt Flagship"
+          alt="Z Egypt Flagship"
           className="w-full h-full object-cover brightness-75"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8 text-white">
@@ -41,7 +41,7 @@ export const AboutPage: React.FC = () => {
             ELEGANCE IN ACCESSIBILITY
           </h2>
           <p>
-            Zara Egypt represents the pinnacle of modern luxury retail. Driven by a commitment to architectural minimalism, high-grade fabrics, and rapid runway-to-street deployment, our Egyptian storefront serves millions of fashion enthusiasts across Cairo, Alexandria, Giza, and the Red Sea.
+            Z Egypt represents the pinnacle of modern luxury retail. Driven by a commitment to architectural minimalism, high-grade fabrics, and rapid runway-to-street deployment, our Egyptian storefront serves millions of fashion enthusiasts across Cairo, Alexandria, Giza, and the Red Sea.
           </p>
         </div>
         <div className="space-y-3">
@@ -49,7 +49,7 @@ export const AboutPage: React.FC = () => {
             LOCALIZED INNOVATION
           </h2>
           <p>
-            With native Egyptian payment integrations like Fawry Pay, InstaPay, and Meeza, alongside express door-to-door courier tracking and localized Arabic RTL digital experiences, shopping with Zara online is seamless, secure, and immediate.
+            With native Egyptian payment integrations like Fawry Pay, InstaPay, and Meeza, alongside express door-to-door courier tracking and localized Arabic RTL digital experiences, shopping with Z online is seamless, secure, and immediate.
           </p>
         </div>
       </div>

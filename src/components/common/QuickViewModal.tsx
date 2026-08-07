@@ -41,7 +41,7 @@ export const QuickViewModal: React.FC = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
-          className="surface-panel text-white max-w-4xl w-full shadow-2xl border border-white/10 overflow-hidden relative grid grid-cols-1 md:grid-cols-2"
+          className="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 max-w-4xl w-full shadow-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden relative grid grid-cols-1 md:grid-cols-2"
         >
           {/* Close button */}
           <button

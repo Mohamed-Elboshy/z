@@ -35,20 +35,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     <CardContainer containerClassName="w-full">
       <CardBody className="w-full">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{ y: -3 }}
           viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="group relative flex flex-col surface-panel border border-white/10 shadow-[0_30px_90px_-55px_rgba(0,0,0,0.7)] transition-all duration-300 hover:shadow-[0_36px_120px_-65px_rgba(0,0,0,0.85)] hover:-translate-y-0.5 w-full backdrop-blur-xl"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            onTouchStart={() => setIsHovered(true)}
-            onTouchEnd={() => setIsHovered(false)}
+          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+          className="group relative flex flex-col bg-white dark:bg-zinc-950 border border-zinc-200/80 dark:border-zinc-800 transition-shadow duration-300 hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-white/5 w-full"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
           {/* Product Image Stage with 3D Z-Depth */}
           <CardItem translateZ={30} className="w-full">
-            <div className="relative aspect-[3/4] w-full overflow-hidden bg-zinc-950/70 backdrop-blur-sm cursor-pointer">
+            <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#F5F5F3] dark:bg-zinc-900 cursor-pointer">
               <motion.img
                 key={currentImage}
                 initial={{ opacity: 0.8 }}
@@ -125,8 +122,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               </div>
 
               {/* Quick Size Select Overlay on Hover */}
-              <div className="absolute inset-x-0 bottom-0 bg-zinc-950/95 backdrop-blur-xl p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out border-t border-white/10 z-20">
-                <p className="text-[9px] font-sans tracking-[0.2em] text-zinc-400 uppercase mb-2 text-center">
+              <div className="absolute inset-x-0 bottom-0 bg-white/95 dark:bg-black/95 backdrop-blur-md p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out border-t border-zinc-200 dark:border-zinc-800 z-20">
+                <p className="text-[9px] font-sans tracking-[0.2em] text-zinc-500 uppercase mb-2 text-center">
                   {t.selectSize}
                 </p>
                 <div className="flex flex-wrap justify-center gap-1.5">

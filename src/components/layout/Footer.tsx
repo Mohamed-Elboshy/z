@@ -14,19 +14,19 @@ export const Footer: React.FC = () => {
       addToast(language === 'ar' ? 'يرجى إدخال بريد إلكتروني صحيح' : 'Please enter a valid email', 'error');
       return;
     }
-    addToast(language === 'ar' ? 'شكراً لاشتراكك! استخدم كود ZARA20 للحصول على خصم 20%' : 'Subscribed! Use code ZARA20 for 20% off', 'success');
+    addToast(language === 'ar' ? 'شكراً لاشتراكك! استخدم كود Z20 للحصول على خصم 20%' : 'Subscribed! Use code Z20 for 20% off', 'success');
     setEmail('');
   };
 
   return (
-    <footer className="surface-panel text-white pt-16 pb-12 border-t border-white/10">
+    <footer className="bg-[#121212] text-white dark:bg-black dark:text-zinc-100 pt-16 pb-12 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Newsletter Section */}
         <div className="border-b border-white/10 pb-12 mb-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="max-w-lg space-y-2">
             <h3 className="text-xl sm:text-2xl font-serif font-light tracking-[0.15em] uppercase">
-              JOIN THE ZARA NEWSLETTER
+              JOIN THE Z NEWSLETTER
             </h3>
             <p className="text-zinc-400 text-xs tracking-wider">
               Subscribe to receive private lookbooks, seasonal drops, and 20% off your first Egyptian order.
@@ -59,7 +59,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Egypt Stores */}
           <div className="space-y-4">
             <h4 className="text-white font-serif font-bold text-lg tracking-widest uppercase">
-              ZARA EGYPT
+              Z EXCLUSIVE COLLECTION
             </h4>
             <p className="leading-relaxed text-zinc-400">{t.info.aboutText}</p>
             <div className="pt-2 space-y-2 text-zinc-300">
@@ -179,7 +179,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Legal bar */}
         <div className="border-t border-zinc-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-zinc-500 gap-4">
-          <p>© {new Date().getFullYear()} ZARA. ALL RIGHTS RESERVED. EGYPT FLAGSHIP STORE.</p>
+          <p>© {new Date().getFullYear()} Z. ALL RIGHTS RESERVED. EGYPT FLAGSHIP STORE.</p>
           <div className="flex gap-6">
             <button onClick={() => navigateTo('policy-privacy')} className="hover:text-zinc-300">
               {t.info.privacyTitle}

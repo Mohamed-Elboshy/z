@@ -140,9 +140,9 @@ export const InvoicePDFView: React.FC<InvoicePDFViewProps> = ({ order, onClose }
         <div className="border-t border-zinc-300 pt-6 text-[10px] font-mono text-zinc-500 text-center space-y-1">
           <div className="flex items-center justify-center gap-1 text-emerald-700 font-bold">
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>OFFICIAL ELECTRONIC TAX RECEIPT - ZARA EGYPT</span>
+            <span>OFFICIAL ELECTRONIC TAX RECEIPT - Z EGYPT</span>
           </div>
-          <p>Thank you for shopping at Zara Flagship Store. Keep this receipt for 30-day returns & exchanges.</p>
+          <p>Thank you for shopping at Z Flagship Store. Keep this receipt for 30-day returns & exchanges.</p>
         </div>
       </div>
     </div>

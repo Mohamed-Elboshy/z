@@ -41,14 +41,14 @@ export const ContactPage: React.FC = () => {
               <Phone className="w-5 h-5 text-amber-500" />
               <div>
                 <p className="font-bold text-black dark:text-white">CUSTOMER HELPLINE</p>
-                <p className="text-zinc-500">+20 19000 (Zara Egypt Toll Free)</p>
+                <p className="text-zinc-500">+20 19000 (Z Egypt Toll Free)</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-amber-500" />
               <div>
                 <p className="font-bold text-black dark:text-white">EMAIL SUPPORT</p>
-                <p className="text-zinc-500">support.egypt@zara.com</p>
+                <p className="text-zinc-500">support.egypt@z.com</p>
               </div>
             </div>
           </div>

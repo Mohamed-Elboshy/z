@@ -29,7 +29,7 @@ export const AuthPage: React.FC = () => {
     setUser({
       id: 'usr-new',
       firstName: loginEmail.split('@')[0] || 'Member',
-      lastName: 'Zara',
+      lastName: 'Z',
       email: loginEmail,
       phone: '+20 100 123 4567',
       gender: 'female',
@@ -47,7 +47,7 @@ export const AuthPage: React.FC = () => {
     setUser({
       id: 'usr-reg',
       firstName: regFirstName || 'Member',
-      lastName: regLastName || 'Zara',
+      lastName: regLastName || 'Z',
       email: regEmail,
       phone: regPhone || '+20 100 000 0000',
       gender: 'female',
@@ -69,7 +69,7 @@ export const AuthPage: React.FC = () => {
           {mode === 'login' ? t.account.loginTitle : mode === 'register' ? t.account.registerTitle : t.account.forgotPasswordTitle}
         </h1>
         <p className="text-xs font-mono text-zinc-500">
-          Access your Zara orders, saved addresses, and express checkout in Egypt.
+          Access your Z orders, saved addresses, and express checkout in Egypt.
         </p>
       </div>
 

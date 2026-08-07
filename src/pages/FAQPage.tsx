@@ -11,7 +11,7 @@ export const FAQPage: React.FC = () => {
 
   const faqs = [
     {
-      qEn: 'How does Fawry Pay work for my Zara order?',
+      qEn: 'How does Fawry Pay work for my Z order?',
       qAr: 'كيف يعمل التدفّع عن طريق خدمة فوري لمشترياتي؟',
       aEn: 'Select Fawry at checkout to receive a unique 9-digit payment reference code. Take this reference code to any Fawry kiosk, retail store, or banking app in Egypt within 24 hours to complete your payment.',
       aAr: 'اختر فوري عند إتمام الطلب للحصول على كود دفع مكون من 9 أرقام. استخدم هذا الكود في أي منفذ فوري أو تطبيق بنكي خلال 24 ساعة.'
@@ -25,13 +25,13 @@ export const FAQPage: React.FC = () => {
     {
       qEn: 'What is the return and exchange policy?',
       qAr: 'ما هي سياسة الاستبدال والاسترجاع؟',
-      aEn: 'You can exchange or return any unworn item with original tags within 30 days of delivery. Returns can be handed to our courier or dropped off at any official Zara retail store in Egypt.',
+      aEn: 'You can exchange or return any unworn item with original tags within 30 days of delivery. Returns can be handed to our courier or dropped off at any official Z retail store in Egypt.',
       aAr: 'يمكنك استبدال أو إرجاع أي منتج بحالته الأصلية خلال 30 يوماً من الاستلام من خلال مندوبنا أو في متاجرنا.'
     },
     {
-      qEn: 'How do I choose the accurate Zara size for my body?',
+      qEn: 'How do I choose the accurate Z size for my body?',
       qAr: 'كيف أختار المقاس المناسب لجسدي بدقة؟',
-      aEn: 'Use our interactive "Calculate My Size" tool on any product detail page. Enter your height, weight, and fit preference for an instant size recommendation based on real Zara customer fit data.',
+      aEn: 'Use our interactive "Calculate My Size" tool on any product detail page. Enter your height, weight, and fit preference for an instant size recommendation based on real Z customer fit data.',
       aAr: 'استخدم حاسبة المقاس الذكية الموجودة بصفحة المنتج. أدخل طولك ووزنك ونمط مقاسك المفضل للحصول على المقاس الأنسب.'
     }
   ];
@@ -40,7 +40,7 @@ export const FAQPage: React.FC = () => {
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-8">
       <div className="text-center space-y-2">
         <h1 className="text-3xl font-serif font-bold uppercase tracking-wider">{t.faq.title}</h1>
-        <p className="text-xs font-mono text-zinc-500">Everything you need to know about shopping with Zara Egypt</p>
+        <p className="text-xs font-mono text-zinc-500">Everything you need to know about shopping with Z Egypt</p>
       </div>
 
       <div className="space-y-4">

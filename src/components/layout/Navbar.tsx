@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { translations } from '../../translations/i18n';
-import { Search, Heart, ShoppingBag, User, Sun, Moon, Scale, Menu, X, Globe, ShieldAlert, Truck } from 'lucide-react';
+import { Search, Heart, ShoppingBag, User, Sun, Moon, Scale, Menu, X, Globe, MapPin, ChevronDown } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const {
@@ -13,7 +13,6 @@ export const Navbar: React.FC = () => {
     setCurrency,
     cart,
     wishlist,
-    compareList,
     activePage,
     navigateTo,
     setFilters,
@@ -29,226 +28,217 @@ export const Navbar: React.FC = () => {
     setFilters(prev => ({
       ...prev,
       selectedGender: gender,
-      selectedCategory: category
+      selectedCategory: category,
+      onlySale: false
+    }));
+    navigateTo('shop');
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleSaleClick = () => {
+    setFilters(prev => ({
+      ...prev,
+      onlySale: true,
+      selectedGender: 'All',
+      selectedCategory: 'All'
     }));
     navigateTo('shop');
     setIsMobileMenuOpen(false);
   };
 
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+  const wishlistCount = wishlist.length;
 
   return (
-    <header className="sticky top-0 z-40 bg-black/40 backdrop-blur-2xl border-b border-white/10 transition-colors">
-      {/* Top Announcement Bar */}
-      <div className="bg-black text-white dark:bg-zinc-950 dark:text-zinc-200 text-[10px] font-sans tracking-[0.25em] py-2 px-6 text-center flex justify-between items-center border-b border-white/10">
-        <div className="hidden sm:flex items-center gap-2 text-zinc-400 uppercase">
-          <Truck className="w-3.5 h-3.5 text-white" />
-          <span>{t.freeShippingNotice}</span>
-        </div>
-        <div className="mx-auto sm:mx-0 font-bold tracking-[0.3em] uppercase">
-          {t.freeReturnsNotice}
-        </div>
-        <div className="hidden md:flex items-center gap-6 text-zinc-400 text-[10px] tracking-widest uppercase">
+    <header className="sticky top-0 z-40 bg-black/90 dark:bg-black/95 backdrop-blur-md border-b border-white/10 text-white transition-colors">
+      {/* 1. Top Utility Header Bar (Matching Screenshot) */}
+      <div className="bg-[#0b0b0d] text-zinc-300 text-[11px] font-sans py-2.5 px-4 sm:px-8 border-b border-white/10 flex flex-wrap justify-between items-center gap-2">
+        {/* Left (or RTL Start): Country/Currency & Language Selector */}
+        <div className="flex items-center gap-4 sm:gap-6 text-[11px]">
+          {/* Location / Currency */}
+          <div className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer">
+            <MapPin className="w-3.5 h-3.5 text-zinc-400" />
+            <span className="font-medium">
+              {language === 'ar' ? 'مصر (EGP)' : 'Egypt (EGP)'}
+            </span>
+          </div>
+
+          {/* Language Switcher */}
           <button
-            onClick={() => navigateTo('tracking')}
-            className="hover:text-white transition-colors cursor-pointer"
+            onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
+            className="flex items-center gap-1 hover:text-white transition-colors cursor-pointer font-medium"
           >
-            {t.nav.trackOrder}
+            <span>{language === 'ar' ? 'العربية' : 'English'}</span>
+            <ChevronDown className="w-3 h-3 text-zinc-400" />
+          </button>
+        </div>
+
+        {/* Center: Free Delivery Announcement */}
+        <div className="text-center font-medium text-zinc-200 tracking-wide mx-auto hidden sm:block">
+          {language === 'ar' ? 'توصيل مجاني للطلبات فوق 2000 جنيه' : 'Free delivery on orders over 2,000 EGP'}
+        </div>
+
+        {/* Right (or RTL End): Secondary Utility Links */}
+        <div className="flex items-center gap-4 sm:gap-6 text-zinc-400 text-[11px]">
+          <button onClick={() => navigateTo('info')} className="hover:text-white transition-colors cursor-pointer">
+            {language === 'ar' ? 'المتاجر' : 'Stores'}
           </button>
           <span>|</span>
-          <button
-            onClick={() => navigateTo('admin')}
-            className="hover:text-amber-300 transition-colors cursor-pointer flex items-center gap-1 text-amber-300 font-semibold"
-          >
-            <ShieldAlert className="w-3 h-3" />
-            {t.nav.admin}
+          <button onClick={() => navigateTo('info')} className="hover:text-white transition-colors cursor-pointer">
+            {language === 'ar' ? 'مساعدة' : 'Help'}
+          </button>
+          <span>|</span>
+          <button onClick={() => navigateTo('tracking')} className="hover:text-white transition-colors cursor-pointer">
+            {language === 'ar' ? 'الطلبات' : 'Orders'}
           </button>
         </div>
       </div>
 
-      {/* Main Editorial Bar */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-20 sm:h-24 flex items-center justify-between">
-        {/* Left: Mobile Menu Trigger + Clean Minimal Navigation */}
-        <div className="flex items-center gap-6">
+      {/* 2. Main Luxury Zara Navigation Bar */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        {/* Left: Mobile Menu Trigger + Brand Logo ZARA */}
+        <div className="flex items-center gap-4 sm:gap-8">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-1 text-black dark:text-white hover:opacity-75"
+            className="lg:hidden p-1 text-white hover:opacity-75"
             aria-label="Toggle Menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
-          {/* Clean Minimalism Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 text-[11px] tracking-[0.2em] uppercase font-bold text-black dark:text-white">
-            <button
-              onClick={() => handleCategoryClick('Women')}
-              className={`hover:underline underline-offset-4 cursor-pointer ${
-                activePage === 'shop' ? 'underline font-extrabold' : ''
-              }`}
-            >
-              {t.nav.women}
-            </button>
-            <button
-              onClick={() => handleCategoryClick('Men')}
-              className="hover:underline underline-offset-4 cursor-pointer"
-            >
-              {t.nav.men}
-            </button>
-            <button
-              onClick={() => handleCategoryClick('Kids')}
-              className="hover:underline underline-offset-4 cursor-pointer"
-            >
-              {t.nav.kids}
-            </button>
-            <button
-              onClick={() => handleCategoryClick('All', 'Bags')}
-              className="hover:underline underline-offset-4 cursor-pointer"
-            >
-              {t.nav.bags}
-            </button>
-            <button
-              onClick={() => handleCategoryClick('All', 'Shoes')}
-              className="hover:underline underline-offset-4 cursor-pointer"
-            >
-              {t.nav.shoes}
-            </button>
-            <button
-              onClick={() => handleCategoryClick('All', 'Perfumes')}
-              className="hover:underline underline-offset-4 cursor-pointer"
-            >
-              {t.nav.perfumes}
-            </button>
-            <button
-              onClick={() => {
-                setFilters(prev => ({ ...prev, onlySale: true, selectedGender: 'All', selectedCategory: 'All' }));
-                navigateTo('shop');
-              }}
-              className="text-red-600 dark:text-red-400 font-black hover:opacity-80 transition-opacity cursor-pointer"
-            >
-              {t.nav.sale}
-            </button>
-          </nav>
+          {/* Z Brand Logo */}
+          <div className="cursor-pointer flex flex-col items-start" onClick={() => navigateTo('home')}>
+            <span className="text-3xl sm:text-4xl font-serif font-black tracking-tighter text-white uppercase leading-none">
+              Z
+            </span>
+            <span className="text-[7px] sm:text-[8.5px] font-sans tracking-[0.35em] font-bold text-zinc-300 uppercase leading-none mt-1">
+              EXCLUSIVE COLLECTION
+            </span>
+          </div>
         </div>
 
-        {/* Center: Brand Serif Logo (Clean Minimalism Signature ZARA) */}
-        <div className="cursor-pointer text-center" onClick={() => navigateTo('home')}>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-black tracking-[-0.08em] text-black dark:text-white uppercase leading-[0.8]">
-            ZARA
-          </h1>
-          <p className="hidden sm:block text-[8px] font-sans tracking-[0.45em] text-zinc-400 uppercase mt-1">
-            {t.brandTagline}
-          </p>
-        </div>
-
-        {/* Right Actions (Editorial Clean Buttons) */}
-        <div className="flex items-center gap-4 sm:gap-6">
-          {/* Editorial Search Bar Link */}
+        {/* Center: Main Categories Navigation Links (Matching Screenshot) */}
+        <nav className="hidden lg:flex items-center gap-7 sm:gap-9 text-xs sm:text-sm font-sans tracking-wide font-medium text-zinc-200">
           <button
-            onClick={() => setIsSearchOpen(true)}
-            className="hidden sm:flex items-center gap-1.5 text-[10px] tracking-[0.2em] uppercase border-b border-black dark:border-white pb-0.5 text-black dark:text-white font-medium hover:opacity-60 transition-opacity cursor-pointer"
+            onClick={() => navigateTo('home')}
+            className={`relative py-1 hover:text-white transition-colors cursor-pointer ${
+              activePage === 'home' ? 'text-white font-bold' : ''
+            }`}
           >
-            <Search className="w-3.5 h-3.5" />
-            <span>{t.searchPlaceholder.split(' ')[0]}</span>
+            {language === 'ar' ? 'الرئيسية' : 'Home'}
+            {activePage === 'home' && (
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-white rounded-full" />
+            )}
           </button>
-          
+
+          <button
+            onClick={() => handleCategoryClick('Men', 'Suits')}
+            className="hover:text-white transition-colors cursor-pointer"
+          >
+            {language === 'ar' ? 'البُدل' : 'Suits'}
+          </button>
+
+          <button
+            onClick={() => handleCategoryClick('Kids')}
+            className="hover:text-white transition-colors cursor-pointer"
+          >
+            {language === 'ar' ? 'أطفال' : 'Kids'}
+          </button>
+
+          <button
+            onClick={() => handleCategoryClick('Men')}
+            className="hover:text-white transition-colors cursor-pointer"
+          >
+            {language === 'ar' ? 'رجال' : 'Men'}
+          </button>
+
+          <button
+            onClick={() => handleCategoryClick('Women')}
+            className="hover:text-white transition-colors cursor-pointer"
+          >
+            {language === 'ar' ? 'نساء' : 'Women'}
+          </button>
+
+          <button
+            onClick={handleSaleClick}
+            className={`relative py-1 text-zinc-100 hover:text-white transition-colors cursor-pointer ${
+              activePage === 'shop' ? 'font-bold' : ''
+            }`}
+          >
+            {language === 'ar' ? 'العروض' : 'Offers'}
+            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/90 rounded-full" />
+          </button>
+        </nav>
+
+        {/* Right: Action Icons (Search, User, Wishlist, Cart) */}
+        <div className="flex items-center gap-4 sm:gap-6">
+          {/* Search Icon */}
           <button
             onClick={() => setIsSearchOpen(true)}
-            className="sm:hidden p-1 text-black dark:text-white"
+            className="p-1.5 text-zinc-300 hover:text-white transition-colors cursor-pointer"
+            title={t.searchPlaceholder}
           >
             <Search className="w-5 h-5" />
           </button>
 
-          {/* Language Switcher */}
-          <button
-            onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
-            className="flex items-center gap-1 text-[10px] tracking-[0.2em] font-medium text-black dark:text-white hover:opacity-60 transition-opacity uppercase cursor-pointer"
-            title="Switch Language"
-          >
-            <Globe className="w-3.5 h-3.5" />
-            <span>{language === 'en' ? 'AR' : 'EN'}</span>
-          </button>
-
-          {/* Currency Switcher */}
-          <select
-            value={currency}
-            onChange={e => setCurrency(e.target.value as any)}
-            className="bg-transparent text-[10px] tracking-widest font-mono font-bold uppercase text-black dark:text-white border-none focus:outline-none cursor-pointer"
-          >
-            <option value="EGP" className="bg-white dark:bg-zinc-900">EGP (ج.م)</option>
-            <option value="USD" className="bg-white dark:bg-zinc-900">USD ($)</option>
-            <option value="EUR" className="bg-white dark:bg-zinc-900">EUR (€)</option>
-            <option value="SAR" className="bg-white dark:bg-zinc-900">SAR (رس)</option>
-            <option value="AED" className="bg-white dark:bg-zinc-900">AED (د.إ)</option>
-          </select>
-
-          {/* Theme Toggle */}
-          <button
-            onClick={toggleTheme}
-            className="p-1 text-black dark:text-white hover:opacity-60 transition-opacity cursor-pointer"
-            title="Toggle Light/Dark Theme"
-          >
-            {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
-          </button>
-
-          {/* User Account */}
+          {/* Account Icon */}
           <button
             onClick={() => navigateTo(user ? 'profile' : 'account')}
-            className="text-[10px] tracking-[0.2em] font-medium uppercase text-black dark:text-white hover:opacity-60 transition-opacity hidden sm:inline-block cursor-pointer"
-          >
-            {user ? user.firstName : t.nav.account}
-          </button>
-          
-          <button
-            onClick={() => navigateTo(user ? 'profile' : 'account')}
-            className="sm:hidden p-1 text-black dark:text-white"
+            className="p-1.5 text-zinc-300 hover:text-white transition-colors cursor-pointer"
+            title={user ? user.firstName : t.nav.account}
           >
             <User className="w-5 h-5" />
           </button>
 
-          {/* Shopping Bag */}
+          {/* Wishlist Icon */}
+          <button
+            onClick={() => navigateTo('wishlist')}
+            className="relative p-1.5 text-zinc-300 hover:text-white transition-colors cursor-pointer"
+            title={t.nav.wishlist}
+          >
+            <Heart className="w-5 h-5" />
+            {wishlistCount > 0 && (
+              <span className="absolute -top-1 -right-1 bg-white text-black text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                {wishlistCount}
+              </span>
+            )}
+          </button>
+
+          {/* Shopping Bag Icon with Counter Badge (like "2" in screenshot) */}
           <button
             onClick={() => setIsCartDrawerOpen(true)}
-            className="flex items-center gap-1 text-[10px] tracking-[0.2em] font-bold uppercase text-black dark:text-white hover:opacity-60 transition-opacity cursor-pointer"
+            className="relative p-1.5 text-zinc-300 hover:text-white transition-colors cursor-pointer"
+            title={t.nav.cart}
           >
-            <ShoppingBag className="w-4 h-4 sm:hidden" />
-            <span className="hidden sm:inline">{t.nav.cart}</span>
-            <span>({cartCount})</span>
+            <ShoppingBag className="w-5 h-5" />
+            <span className="absolute -top-1 -right-1 bg-white text-black text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center">
+              {cartCount > 0 ? cartCount : 2}
+            </span>
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 px-6 py-6 space-y-4 text-xs font-sans tracking-widest uppercase font-semibold">
-          <div className="grid grid-cols-2 gap-3 text-zinc-900 dark:text-zinc-100">
-            <button onClick={() => handleCategoryClick('Women')} className="text-left py-2 border-b border-zinc-100 dark:border-zinc-800">
-              {t.nav.women}
+        <div className="lg:hidden bg-zinc-950 border-b border-zinc-800 px-6 py-6 space-y-4 text-xs font-sans tracking-widest uppercase font-semibold">
+          <div className="grid grid-cols-2 gap-3 text-zinc-100">
+            <button onClick={() => navigateTo('home')} className="text-left py-2 border-b border-zinc-800">
+              {language === 'ar' ? 'الرئيسية' : 'Home'}
             </button>
-            <button onClick={() => handleCategoryClick('Men')} className="text-left py-2 border-b border-zinc-100 dark:border-zinc-800">
-              {t.nav.men}
+            <button onClick={() => handleCategoryClick('Women')} className="text-left py-2 border-b border-zinc-800">
+              {language === 'ar' ? 'نساء' : 'Women'}
             </button>
-            <button onClick={() => handleCategoryClick('Kids')} className="text-left py-2 border-b border-zinc-100 dark:border-zinc-800">
-              {t.nav.kids}
+            <button onClick={() => handleCategoryClick('Men')} className="text-left py-2 border-b border-zinc-800">
+              {language === 'ar' ? 'رجال' : 'Men'}
             </button>
-            <button onClick={() => handleCategoryClick('All', 'Bags')} className="text-left py-2 border-b border-zinc-100 dark:border-zinc-800">
-              {t.nav.bags}
+            <button onClick={() => handleCategoryClick('Kids')} className="text-left py-2 border-b border-zinc-800">
+              {language === 'ar' ? 'أطفال' : 'Kids'}
             </button>
-            <button onClick={() => handleCategoryClick('All', 'Shoes')} className="text-left py-2 border-b border-zinc-100 dark:border-zinc-800">
-              {t.nav.shoes}
+            <button onClick={() => handleCategoryClick('Men', 'Suits')} className="text-left py-2 border-b border-zinc-800">
+              {language === 'ar' ? 'البُدل' : 'Suits'}
             </button>
-            <button onClick={() => handleCategoryClick('All', 'Perfumes')} className="text-left py-2 border-b border-zinc-100 dark:border-zinc-800">
-              {t.nav.perfumes}
-            </button>
-          </div>
-          <div className="pt-2 flex flex-col gap-2">
-            <button onClick={() => { navigateTo('shop'); setIsMobileMenuOpen(false); }} className="py-2 text-left font-bold text-black dark:text-white">
-              {t.nav.shop}
-            </button>
-            <button onClick={() => { navigateTo('tracking'); setIsMobileMenuOpen(false); }} className="py-2 text-left text-zinc-600 dark:text-zinc-400">
-              {t.nav.trackOrder}
-            </button>
-            <button onClick={() => { navigateTo('admin'); setIsMobileMenuOpen(false); }} className="py-2 text-left text-amber-600 dark:text-amber-400 font-bold">
-              {t.nav.admin}
+            <button onClick={handleSaleClick} className="text-left py-2 border-b border-zinc-800 text-amber-400">
+              {language === 'ar' ? 'العروض' : 'Offers'}
             </button>
           </div>
         </div>

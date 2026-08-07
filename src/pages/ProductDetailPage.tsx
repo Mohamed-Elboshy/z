@@ -391,7 +391,7 @@ const mockProductReviews = [
     userName: 'Mariam K.',
     rating: 5,
     date: '3 days ago',
-    commentEn: 'Absolute perfection! Heavy luxury weight, fits oversized exactly like Zara lookbooks.',
+    commentEn: 'Absolute perfection! Heavy luxury weight, fits oversized exactly like Z lookbooks.',
     commentAr: 'ممتازة جداً وثقيلة، الموديل مضبوط وأنيق.',
     isVerified: true
   },

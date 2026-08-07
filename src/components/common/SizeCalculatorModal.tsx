@@ -149,7 +149,7 @@ export const SizeCalculatorModal: React.FC = () => {
             >
               <div className="flex items-center justify-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-bold text-xs">
                 <CheckCircle2 className="w-4 h-4" />
-                <span>94% Accuracy Based on Zara Egyptian Shoppers</span>
+                <span>94% Accuracy Based on Z Egyptian Shoppers</span>
               </div>
               <p className="text-xs text-zinc-500">{t.sizeCalc.recommendedSize}</p>
               <div className="text-3xl font-mono font-black text-black dark:text-white">

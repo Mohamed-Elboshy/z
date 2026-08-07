@@ -119,7 +119,7 @@ export const CheckoutPage: React.FC = () => {
 
           {completedOrder.paymentMethod === 'instapay' && (
             <div className="p-4 bg-purple-50 dark:bg-purple-950/50 border border-purple-300 dark:border-purple-700 space-y-2 text-purple-900 dark:text-purple-200">
-              <span className="font-bold">InstaPay Address: zara.egypt@instapay</span>
+              <span className="font-bold">InstaPay Address: z.egypt@instapay</span>
               <p className="text-[11px] leading-relaxed">{t.checkout.instapayInstructions}</p>
             </div>
           )}

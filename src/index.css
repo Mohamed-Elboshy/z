@@ -1,78 +1,21 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 @layer base {
-  :root {
-    color-scheme: dark;
-    color: #f5f4f7;
-    background-color: #040205;
-    background-image:
-      linear-gradient(90deg, rgba(147, 24, 45, 0.08) 1px, transparent 1px),
-      linear-gradient(180deg, rgba(147, 24, 45, 0.08) 1px, transparent 1px),
-      radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.08), transparent 18%),
-      radial-gradient(circle at 85% 18%, rgba(255, 255, 255, 0.06), transparent 24%);
-    background-size: 18px 18px, 18px 18px, 360px 360px, 420px 420px;
-    background-attachment: fixed;
-  }
-
-  html, body, #root {
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #040205;
-    background-image: inherit;
-    background-attachment: fixed;
-    color: #f5f4f7;
-  }
-
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    background-color: #0c0205;
+    color: #ffffff;
   }
 
   h1, h2, h3, .font-serif {
     font-family: 'Bodoni Moda', 'Playfair Display', Georgia, serif;
-    color: #fff;
-  }
-
-  * {
-    transition: color 220ms ease, background-color 220ms ease, border-color 220ms ease, transform 220ms ease;
-  }
-
-  *::selection {
-    background: linear-gradient(135deg, rgba(196, 46, 70, 0.95), rgba(74, 12, 28, 0.9));
-    color: #fff;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
-  }
-
-  .surface-panel {
-    background: rgba(12, 8, 14, 0.88);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.35), 0 18px 60px rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(18px);
-  }
-
-  button, input, textarea, select {
-    color: inherit;
-  }
-
-  a, button, input, textarea, select {
-    transition-duration: 180ms;
-    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   }
 }
 
-@layer utilities {
-  .velvet-surface {
-    background: rgba(5, 5, 6, 0.88);
-    backdrop-filter: blur(18px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.4), 0 24px 80px rgba(0, 0, 0, 0.35);
-    background-image:
-      linear-gradient(90deg, rgba(147, 24, 45, 0.06) 1px, transparent 1px),
-      linear-gradient(180deg, rgba(147, 24, 45, 0.06) 1px, transparent 1px);
-    background-size: 22px 22px, 22px 22px;
-  }
+/* Subtle thin border overlay lines for ultra-clean editorial aesthetic */
+.clean-grid-overlay {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
 }
-

@@ -160,7 +160,7 @@ export const translations = {
         cod: 'Cash On Delivery (COD)',
       },
       fawryInstructions: 'You will receive a 9-digit Fawry Reference Code. Pay at any Fawry kiosk within 24 hours.',
-      instapayInstructions: 'Transfer the exact amount to InstaPay Address: zara.egypt@instapay or scan QR Code.',
+      instapayInstructions: 'Transfer the exact amount to InstaPay Address: z.egypt@instapay or scan QR Code.',
       meezaInstructions: 'Enter your 16-digit Meeza Egyptian Card details safely.',
       placeOrder: 'CONFIRM & PAY NOW',
       orderSuccessTitle: 'THANK YOU FOR YOUR ORDER',
@@ -268,11 +268,11 @@ export const translations = {
 
     // Information Footer Pages
     info: {
-      aboutTitle: 'ABOUT ZARA EGYPT',
-      aboutText: 'ZARA is one of the largest international fashion companies. The customer is at the heart of our unique business model, which includes design, production, distribution, and sales through our extensive retail network and online flagship experience in Egypt.',
+      aboutTitle: 'ABOUT Z EGYPT',
+      aboutText: 'Z is one of the premier international fashion brands. The customer is at the heart of our unique business model, which includes design, production, distribution, and sales through our extensive retail network and online flagship experience in Egypt.',
       contactTitle: 'CONTACT OUR CONCIERGE',
       contactPhone: '+20 2 2123 4567',
-      contactEmail: 'contact.eg@zara.com',
+      contactEmail: 'contact.eg@z.com',
       storesTitle: 'STORES IN EGYPT',
       cairoStores: 'Cairo: Mall of Egypt, City Centre Almaza, Cairo Festival City, Citystars Heliopolis.',
       alexStores: 'Alexandria: Designia Mall, San Stefano Grand Plaza.',
@@ -286,7 +286,7 @@ export const translations = {
 
   ar: {
     // Brand & General
-    brandName: 'زارا',
+    brandName: 'Z',
     brandTagline: 'المجموعة الحصرية',
     currencySymbol: 'ج.م',
     searchPlaceholder: 'ابحث عن معطف، حقيبة جلدية، بدلة، عطر...',
@@ -443,10 +443,10 @@ export const translations = {
         cod: 'الدفع نقداً عند الاستلام (COD)',
       },
       fawryInstructions: 'ستحصل على كود فوري مرجعي مكون من 9 أرقام للدفع في أي منافذ فوري خلال 24 ساعة.',
-      instapayInstructions: 'قم بتحويل المبلغ المباشر إلى عنوان إنستا باي: zara.egypt@instapay أو امسح الـ QR.',
+      instapayInstructions: 'قم بتحويل المبلغ المباشر إلى عنوان إنستا باي: z.egypt@instapay أو امسح الـ QR.',
       meezaInstructions: 'أدخل بيانات كارت ميزة المصري المكون من 16 رقم بأمان.',
       placeOrder: 'تأكيد ودفع الطلب',
-      orderSuccessTitle: 'شكراً لطلبك من زارا',
+      orderSuccessTitle: 'شكراً لطلبك من Z',
       orderSuccessSubtitle: 'تم تسجيل طلبك بنجاح وجاري تجهيزه فوراً.',
       orderReference: 'رقم الطلب:',
       fawryCodeLabel: 'كود فوري للدفع:',
@@ -551,12 +551,12 @@ export const translations = {
 
     // Information Footer Pages
     info: {
-      aboutTitle: 'عن زارا مصر',
-      aboutText: 'تعد زارا واحدة من أضخم شركات الأزياء العالمية. يقع العميل في قلب نموذج أعمالنا الفريد الذي يشمل التصميم، الإنتاج، التوزيع، والبيع من خلال شبكة متاجرنا الواسعة ومنصتنا الرقمية الرائدة في مصر.',
+      aboutTitle: 'عن Z مصر',
+      aboutText: 'تعد Z واحدة من أرقى براندات الأزياء العالمية. يقع العميل في قلب نموذج أعمالنا الفريد الذي يشمل التصميم، الإنتاج، التوزيع، والبيع من خلال شبكة متاجرنا الواسعة ومنصتنا الرقمية الرائدة في مصر.',
       contactTitle: 'خدمة العملاء والكونسيرج',
       contactPhone: '+20 2 2123 4567',
-      contactEmail: 'contact.eg@zara.com',
-      storesTitle: 'فروع زارا في مصر',
+      contactEmail: 'contact.eg@z.com',
+      storesTitle: 'فروع Z في مصر',
       cairoStores: 'القاهرة: مول مصر، سيتي سنتر ألماظة، كايرو فيستيفال سيتي، سيتي ستارز هليوبوليس.',
       alexStores: 'الإسكندرية: ديزاينيا مول، سان ستيفانو جراند بلازا.',
       faqTitle: 'الأسئلة الشائعة',

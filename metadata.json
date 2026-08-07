@@ -1,6 +1,6 @@
 {
-  "name": "Z Luxury Fashion E-Commerce",
-  "description": "An enterprise-grade Z-inspired fashion e-commerce platform with Arabic/English bilingual support, full checkout, Fawry/InstaPay/Meeza payment simulation, order tracking, and interactive Admin Dashboard.",
+  "name": "Z EXCLUSIVE COLLECTION",
+  "description": "An enterprise-grade luxury fashion e-commerce platform for Z with Arabic/English bilingual support, full checkout, Fawry/InstaPay/Meeza payment simulation, order tracking, and interactive Admin Dashboard.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

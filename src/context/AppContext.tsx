@@ -95,33 +95,32 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [compareList, setCompareList] = useState<Product[]>([]);
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
   const [sizeCalcProduct, setSizeCalcProduct] = useState<Product | null>(null);
-const [user, setUser] = useState<UserProfile | null>({
-  id: 'user-01',
-  firstName: 'Amira',
-  lastName: 'El-Sayed',
-  email: 'amira.sayed@zara.eg',
-  phone: '+20 101 882 9912',
-  gender: 'female',
-  country: 'Egypt',
-  governorate: 'Cairo',
-  role: 'customer', 
-  city: 'New Cairo',
+  const [user, setUser] = useState<UserProfile | null>({
+    id: 'user-01',
+    firstName: 'Amira',
+    lastName: 'El-Sayed',
+    email: 'amira.sayed@zara.eg',
+    phone: '+20 101 882 9912',
+    gender: 'female',
+    country: 'Egypt',
+    governorate: 'Cairo',
+    city: 'New Cairo',
+    addresses: [
+      {
+        id: 'addr-1',
+        title: 'Home Address',
+        recipientName: 'Amira El-Sayed',
+        phone: '+20 101 882 9912',
+        governorate: 'Cairo',
+        city: '5th Settlement',
+        streetAddress: '90th North Street, Villa 14',
+        buildingNo: '14',
+        apartmentNo: '2',
+        isDefault: true
+      }
+    ]
+  });
 
-  addresses: [
-    {
-      id: 'addr-1',
-      title: 'Home Address',
-      recipientName: 'Amira El-Sayed',
-      phone: '+20 101 882 9912',
-      governorate: 'Cairo',
-      city: '5th Settlement',
-      streetAddress: '90th North Street, Villa 14',
-      buildingNo: '14',
-      apartmentNo: '2',
-      isDefault: true
-    }
-  ]
-});
   const [orders, setOrders] = useState<Order[]>([]);
   const [activePage, setActivePage] = useState<string>('home');
   const [selectedProductId, setSelectedProductId] = useState<string | null>('zara-001');
@@ -583,10 +582,8 @@ const [user, setUser] = useState<UserProfile | null>({
 
 export const useApp = () => {
   const context = useContext(AppContext);
-
   if (!context) {
-    throw new Error('useApp must be used within AppProvider');
+    throw new Error('useApp must be used within an AppProvider');
   }
-
   return context;
 };

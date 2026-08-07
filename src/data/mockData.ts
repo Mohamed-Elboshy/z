@@ -13,7 +13,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     category: 'Outerwear',
     gender: 'Women',
     subcategory: 'Coats',
-    brand: 'Z Woman',
+    brand: 'ZARA Woman',
     rating: 4.9,
     reviewCount: 38,
     stock: 24,
@@ -28,7 +28,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     images: [
-     "/images/women/001.jpg"
+      'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1000&q=80'
     ],
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-fashion-model-in-a-long-coat-41525-large.mp4',
     descriptionEn: 'Long coat made of a spun cotton blend. Featuring a lapel collar, long sleeves with tab details on the shoulders, front welt pockets, and belt in the same fabric. Double-breasted button fastening at the front.',
@@ -51,7 +53,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     category: 'Formal Wear',
     gender: 'Men',
     subcategory: 'Blazers',
-    brand: 'Z Man',
+    brand: 'ZARA Man',
     rating: 4.8,
     reviewCount: 24,
     stock: 18,
@@ -65,7 +67,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['48', '50', '52', '54', '56'],
     images: [
-      "/images/women/002.jpg"
+      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1000&q=80'
     ],
     descriptionEn: 'Blazer made of structured fabric. Peak lapels, buttoned cuffs, chest welt pocket, and flap pockets at the hip. Double-breasted button fastening.',
     descriptionAr: 'بليزر مصنوع من قماش محبوك بقوام بارز. ياقة حادة، وأطراف أكمام بأزرار، وجيب بحاشية على الصدر، وجيوب بقلاب عند الورك. إغلاق زر مزدوج الصدر.',
@@ -87,7 +90,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     category: 'Bags',
     gender: 'Women',
     subcategory: 'Handbags',
-    brand: 'Z Leather',
+    brand: 'ZARA Leather',
     rating: 5.0,
     reviewCount: 52,
     stock: 12,
@@ -101,7 +104,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['ONE SIZE'],
     images: [
-       "/images/women/003.jpg"
+      'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=1000&q=80'
     ],
     descriptionEn: 'Real bovine leather city bag. Main compartment with metallic zip closure and magnetic flap over. Tubular top handles and adjustable detachable strap.',
     descriptionAr: 'حقيبة مدنيّة من الجلد البقري الطبيعي. مقصورة رئيسية بإنهاء معدني وسحاب علوي. مقابض دائرية أنيقة وحزام كتف قابل للتعديل والإزالة.',
@@ -123,7 +127,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     category: 'Perfumes',
     gender: 'Men',
     subcategory: 'Eau De Parfum',
-    brand: 'Z Beauty',
+    brand: 'ZARA Beauty',
     rating: 4.7,
     reviewCount: 41,
     stock: 35,
@@ -159,7 +163,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     category: 'Shoes',
     gender: 'Women',
     subcategory: 'Loafers',
-    brand: 'Z Shoes',
+    brand: 'ZARA Shoes',
     rating: 4.8,
     reviewCount: 29,
     stock: 15,
@@ -196,7 +200,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     category: 'Casual Wear',
     gender: 'Kids',
     subcategory: 'Sweatshirts',
-    brand: 'Z Kids',
+    brand: 'ZARA Kids',
     rating: 4.9,
     reviewCount: 19,
     stock: 40,
@@ -210,7 +214,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['6-7 YRS', '8-9 YRS', '10-11 YRS', '12-14 YRS'],
     images: [
-       "/images/kids/006.jpg"
+      'https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1000&q=80'
     ],
     descriptionEn: 'Loose fit crewneck sweatshirt made of soft brush-back heavyweight cotton. Ribbed trims on collar, cuffs, and hem.',
     descriptionAr: 'سويت شيرت بياقة مستديرة وقصة مريحة مصنوع من القطن الثقيل الناعم جداً. أطراف مضلعة على الياقة والأكمام.',
@@ -232,7 +237,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     category: 'Formal Wear',
     gender: 'Women',
     subcategory: 'Dresses',
-    brand: 'Z Woman',
+    brand: 'ZARA Woman',
     rating: 4.9,
     reviewCount: 46,
     stock: 14,
@@ -247,7 +252,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     sizes: ['XS', 'S', 'M', 'L'],
     images: [
-           "/images/kids/007.jpg"  ],
+      'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=80'
+    ],
     descriptionEn: 'Midi slip dress featuring a straight neckline and thin crossover shoulder straps. Side slit at the hem.',
     descriptionAr: 'فستان ميدي انسيابي بياقة مستقيمة وحمالات كتف متقاطعة رفيعة. فتحة جانبية أنيقة عند الحاشية السفليّة.',
     compositionEn: '100% Polyester Satin Finish.',
@@ -268,7 +275,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     category: 'Accessories',
     gender: 'Women',
     subcategory: 'Jewelry',
-    brand: 'Z Jewels',
+    brand: 'ZARA Jewels',
     rating: 4.6,
     reviewCount: 17,
     stock: 50,
