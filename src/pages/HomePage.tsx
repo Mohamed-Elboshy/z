@@ -32,7 +32,7 @@ export const HomePage: React.FC = () => {
       subtitleAr: 'NEW COLLECTION',
       taglineAr: 'أناقة تدوم مع كل لحظة',
       taglineEn: 'Elegance that lasts every moment',
-      image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=2000&q=80',
+      image: "/images/0103.jpg",
       actionGender: 'Women',
       primaryBtnAr: 'تسوقي الآن',
       secondaryBtnAr: 'اكتشف المجموعة'
@@ -44,7 +44,7 @@ export const HomePage: React.FC = () => {
       subtitleAr: 'مجموعة الرجال',
       taglineAr: 'خياطة فاخرة وأناقة عصرية للمناسبات',
       taglineEn: 'Luxury tailoring for every occasion',
-      image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=2000&q=80',
+      image: "images/0101.jpg",
       actionGender: 'Men',
       primaryBtnAr: 'تسوق الآن',
       secondaryBtnAr: 'اكتشف المجموعة'
@@ -56,19 +56,19 @@ export const HomePage: React.FC = () => {
       subtitleAr: 'إكسسوارات حصرية',
       taglineAr: 'لمسات أنيقة تكمل إطلالتك الفاخرة',
       taglineEn: 'Refined leather bags and accessories',
-      image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=2000&q=80',
+      image: "images/0100.jpg",
       actionGender: 'All',
       primaryBtnAr: 'تسوق الآن',
       secondaryBtnAr: 'اكتشف المجموعة'
     },
     {
-      titleEn: 'WHITE LEATHER FOOTWEAR',
-      titleAr: 'أحذية جلدية راقية',
-      subtitleEn: 'NEW FOOTWEAR',
-      subtitleAr: 'مجموعة الأحذية',
-      taglineAr: 'راحة وفخامة بلا حدود في كل خطوة',
-      taglineEn: 'Unrivaled comfort and sophistication',
-      image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=2000&q=80',
+      titleEn: 'THE TAILORED SUIT',
+      titleAr: 'فن الخياطة الإيطالية',
+      subtitleEn: 'NEW MENSWEAR',
+      subtitleAr: 'مجموعة الرجال',
+      taglineAr: 'خياطة فاخرة وأناقة عصرية للمناسبات',
+      taglineEn: 'Luxury tailoring for every occasion',
+      image: "images/0106.jpg",
       actionGender: 'All',
       primaryBtnAr: 'تسوق الآن',
       secondaryBtnAr: 'اكتشف المجموعة'
@@ -290,7 +290,7 @@ export const HomePage: React.FC = () => {
             className="group relative h-48 sm:h-56 overflow-hidden bg-zinc-900 border border-white/15 cursor-pointer shadow-2xl transition-all transform-gpu"
           >
             <img
-              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80"
+              src="/images/0104.jpg" 
               alt="Women"
               className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 filter brightness-90"
             />
@@ -318,7 +318,7 @@ export const HomePage: React.FC = () => {
             className="group relative h-48 sm:h-56 overflow-hidden bg-zinc-900 border border-white/15 cursor-pointer shadow-2xl transition-all transform-gpu"
           >
             <img
-              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80"
+              src="/images/0102.jpg"
               alt="Men"
               className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 filter brightness-90"
             />
@@ -346,7 +346,7 @@ export const HomePage: React.FC = () => {
             className="group relative h-48 sm:h-56 overflow-hidden bg-zinc-900 border border-white/15 cursor-pointer shadow-2xl transition-all transform-gpu"
           >
             <img
-              src="https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?auto=format&fit=crop&w=800&q=80"
+              src="/images/0105.jpg"
               alt="Kids"
               className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 filter brightness-90"
             />
@@ -377,7 +377,7 @@ export const HomePage: React.FC = () => {
             className="group relative h-48 sm:h-56 overflow-hidden bg-zinc-900 border border-white/15 cursor-pointer shadow-2xl transition-all transform-gpu"
           >
             <img
-              src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
+              src="/images/0100.jpg"
               alt="Accessories"
               className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 filter brightness-90"
             />
