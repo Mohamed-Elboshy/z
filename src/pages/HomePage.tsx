@@ -292,8 +292,7 @@ export const HomePage: React.FC = () => {
             <img
               src="/images/0104.jpg" 
               alt="Women"
-              className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 filter brightness-90"
-            />
+              className="w-full h-full object-cover object-center brightness-75 filter contrast-105 scale-[0.85]"            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
               <div>
@@ -320,8 +319,7 @@ export const HomePage: React.FC = () => {
             <img
               src="/images/0102.jpg"
               alt="Men"
-              className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 filter brightness-90"
-            />
+              className="w-full h-full object-cover object-center brightness-75 filter contrast-105 scale-[0.85]"            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
               <div>
@@ -348,8 +346,7 @@ export const HomePage: React.FC = () => {
             <img
               src="/images/0105.jpg"
               alt="Kids"
-              className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 filter brightness-90"
-            />
+              className="w-full h-full object-cover object-center brightness-75 filter contrast-105 scale-[0.85]"            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
               <div>
@@ -379,8 +376,7 @@ export const HomePage: React.FC = () => {
             <img
               src="/images/0100.jpg"
               alt="Accessories"
-              className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 filter brightness-90"
-            />
+              className="w-full h-full object-cover object-center brightness-75 filter contrast-105 scale-[0.85]"            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
               <div>
@@ -495,7 +491,7 @@ export const HomePage: React.FC = () => {
             className="group relative h-96 bg-zinc-900 overflow-hidden cursor-pointer"
           >
             <img
-              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80"
+              src="/images/0103.jpg"
               alt="Women"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80"
             />
@@ -517,7 +513,7 @@ export const HomePage: React.FC = () => {
             className="group relative h-96 bg-zinc-900 overflow-hidden cursor-pointer"
           >
             <img
-              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80"
+              src="/images/0102.jpg"
               alt="Men"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80"
             />
@@ -539,7 +535,7 @@ export const HomePage: React.FC = () => {
             className="group relative h-96 bg-zinc-900 overflow-hidden cursor-pointer"
           >
             <img
-              src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=1000&q=80"
+              src="/images/0106.jpg"
               alt="Kids"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80"
             />
@@ -703,11 +699,11 @@ export const HomePage: React.FC = () => {
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
-              'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80',
-              'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80',
-              'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80',
-              'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=600&q=80'
-            ].map((img, idx) => (
+              '/images/0102.jpg',
+              '/images/0104.jpg',
+              '/images/0100.jpg',
+              '/images/0106.jpg',
+              ].map((img, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, scale: 0.88, y: 30 }}
