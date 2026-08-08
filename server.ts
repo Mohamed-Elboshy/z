@@ -22,7 +22,7 @@ const ai = new GoogleGenAI({
 // In-memory backend database for demo/production reactivity
 let mockProducts = [
   {
-    id: 'zara-001',
+    id: 'z-001',
     nameEn: 'OVERSIZED TRENCH COAT WITH BELT',
     nameAr: 'معطف ترينش فضفاض بفيونكة ورابطة',
     sku: 'ZR-8829-102',
@@ -62,7 +62,7 @@ let mockProducts = [
     tags: ['coat', 'trench', 'winter', 'outerwear', 'beige', 'elegance']
   },
   {
-    id: 'zara-002',
+    id: 'z-002',
     nameEn: 'TEXTURED DOUBLE-BREASTED BLAZER',
     nameAr: 'بليزر مموج مزدوج الصدر',
     sku: 'ZR-4192-504',
@@ -99,7 +99,7 @@ let mockProducts = [
     tags: ['blazer', 'suit', 'men', 'formal', 'navy']
   },
   {
-    id: 'zara-003',
+    id: 'z-003',
     nameEn: 'LEATHER MINI CITY BAG WITH CROSSBODY STRAP',
     nameAr: 'حقيبة ميني جلدية للمدينة مع حزام كروس',
     sku: 'ZR-9901-003',
@@ -136,7 +136,7 @@ let mockProducts = [
     tags: ['leather', 'bag', 'handbag', 'luxury', 'black']
   },
   {
-    id: 'zara-004',
+    id: 'z-004',
     nameEn: 'EAU DE PARFUM NIGHTPOUR HOMME V 100 ML',
     nameAr: 'عطر نايت بور أوم V سعة 100 مل',
     sku: 'ZR-7712-881',
@@ -172,7 +172,7 @@ let mockProducts = [
     tags: ['perfume', 'fragrance', 'men', 'zara', 'beauty']
   },
   {
-    id: 'zara-005',
+    id: 'z-005',
     nameEn: 'CHUNKY LEATHER LOAFERS WITH BUCKLE',
     nameAr: 'حذاء لوفر جلدي سميك مع إبزيم معدني',
     sku: 'ZR-3321-109',
@@ -209,7 +209,7 @@ let mockProducts = [
     tags: ['shoes', 'loafers', 'leather', 'black', 'women']
   },
   {
-    id: 'zara-006',
+    id: 'z-006',
     nameEn: 'KIDS HEAVYWEIGHT COTTON SWEATSHIRT',
     nameAr: 'سويت شيرت قطني ثقيل للأطفال',
     sku: 'ZR-1102-301',
@@ -249,7 +249,7 @@ let mockProducts = [
 
 let mockOrders = [
   {
-    id: 'ZR-EG-94821',
+    id: 'Z-EG-94821',
     createdAt: '2026-08-02T14:30:00Z',
     customerName: 'Ahmad Al-Mansoor',
     customerEmail: 'ahmad@example.com',
@@ -266,7 +266,7 @@ let mockOrders = [
     total: 3550,
     items: [
       {
-        id: 'zara-001',
+        id: 'z-001',
         nameEn: 'OVERSIZED TRENCH COAT WITH BELT',
         nameAr: 'معطف ترينش فضفاض بفيونكة ورابطة',
         size: 'M',
@@ -606,21 +606,34 @@ app.get('/api/admin/stats', (req, res) => {
 async function startServer() {
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: {
+        middlewareMode: true,
+      },
       appType: 'spa',
     });
+
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
+
     app.use(express.static(distPath));
+
     app.get('*', (req, res) => {
       res.sendFile(path.join(distPath, 'index.html'));
     });
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`ZARA Luxury E-Commerce Server running on http://0.0.0.0:${PORT}`);
+    console.log(
+      `ZARA Luxury E-Commerce Server running on http://0.0.0.0:${PORT}`
+    );
   });
 }
 
-startServer();
+// Local development
+if (process.env.NODE_ENV !== 'production') {
+  startServer();
+}
+
+// Vercel
+export default app;

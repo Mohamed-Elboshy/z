@@ -1,5 +1,5 @@
 import React from 'react';
-const burgundySilkBg = '/images/background/burgundy_silk_bg_1786109916303.jpg';
+const burgundySilkBg = '/images/background/burgundy.jpg';
 
 interface VelvetBackgroundProps {
   children?: React.ReactNode;
