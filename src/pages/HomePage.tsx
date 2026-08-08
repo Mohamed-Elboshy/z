@@ -448,7 +448,7 @@ export const HomePage: React.FC = () => {
                 scale: 1.02
               }}
               onClick={() => handleGenderClick('Women')}
-              className="group relative h-48 sm:h-56 overflow-hidden bg-zinc-900 border border-white/15 cursor-pointer shadow-2xl transition-all transform-gpu"
+              className="group relative h-48 sm:h-56 overflow-hidden transition-all transform-gpu"
             >
               <img
                 src="/images/0104.jpg"
@@ -456,7 +456,7 @@ export const HomePage: React.FC = () => {
                 className="w-full h-full object-cover object-center brightness-75 filter contrast-105 scale-[0.85]"
               />
 
-              
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
               <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
                 <div>
