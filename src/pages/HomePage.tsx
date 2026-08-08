@@ -456,7 +456,7 @@ export const HomePage: React.FC = () => {
                 className="w-full h-full object-cover object-center brightness-75 filter contrast-105 scale-[0.85]"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+              <div className="absolute inset-0 " />
 
               <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
                 <div>
