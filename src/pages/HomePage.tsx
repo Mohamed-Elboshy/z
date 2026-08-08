@@ -499,7 +499,7 @@ export const HomePage: React.FC = () => {
                 scale: 1.02
               }}
               onClick={() => handleGenderClick('Men')}
-              className="group relative h-48 sm:h-56 overflow-hidden bg-zinc-900 border border-white/15 cursor-pointer shadow-2xl transition-all transform-gpu"
+              className="group relative h-48 sm:h-56 overflow-hidden transition-all transform-gpu"
             >
               <img
                 src="/images/0102.jpg"
@@ -550,7 +550,7 @@ export const HomePage: React.FC = () => {
                 scale: 1.02
               }}
               onClick={() => handleGenderClick('Kids')}
-              className="group relative h-48 sm:h-56 overflow-hidden bg-zinc-900 border border-white/15 cursor-pointer shadow-2xl transition-all transform-gpu"
+              className="group relative h-48 sm:h-56 overflow-hidden transition-all transform-gpu"
             >
               <img
                 src="/images/0105.jpg"
@@ -608,7 +608,7 @@ export const HomePage: React.FC = () => {
 
                 navigateTo('shop');
               }}
-              className="group relative h-48 sm:h-56 overflow-hidden bg-zinc-900 border border-white/15 cursor-pointer shadow-2xl transition-all transform-gpu"
+              className="group relative h-48 sm:h-56 overflow-hidden transition-all transform-gpu"
             >
               <img
                 src="/images/0100.jpg"
