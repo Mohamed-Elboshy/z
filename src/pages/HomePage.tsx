@@ -453,7 +453,7 @@ export const HomePage: React.FC = () => {
               <img
                 src="/images/0104.jpg"
                 alt="Women"
-                className="w-full h-full object-cover object-center brightness-75 filter contrast-105 scale-[0.85]"
+                className="w-full h-full object-contain object-center brightness-75 filter contrast-105 scale-[0.85]"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
@@ -504,7 +504,7 @@ export const HomePage: React.FC = () => {
               <img
                 src="/images/0102.jpg"
                 alt="Men"
-                className="w-full h-full object-cover object-center brightness-75 filter contrast-105 scale-[0.85]"
+                className="w-full h-full object-contain object-center brightness-75 filter contrast-105 scale-[0.85]"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
@@ -555,7 +555,7 @@ export const HomePage: React.FC = () => {
               <img
                 src="/images/0105.jpg"
                 alt="Kids"
-                className="w-full h-full object-cover object-center brightness-75 filter contrast-105 scale-[0.85]"
+                className="w-full h-full object-contain object-center brightness-75 filter contrast-105 scale-[0.85]"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
@@ -613,7 +613,7 @@ export const HomePage: React.FC = () => {
               <img
                 src="/images/0100.jpg"
                 alt="Accessories"
-                className="w-full h-full object-cover object-center brightness-75 filter contrast-105 scale-[0.85]"
+                className="w-full h-full object-contain object-center brightness-75 filter contrast-105 scale-[0.85]"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
