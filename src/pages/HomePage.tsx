@@ -323,7 +323,7 @@ export const HomePage: React.FC = () => {
             </div>
 
             {/* Thumbnail Carousel */}
-            <div className="absolute bottom-10 left-6 right-6 sm:left-auto sm:right-12 z-20 flex items-center justify-center sm:justify-end gap-2 sm:gap-3 bg-black/70 backdrop-blur-md p-1 sm:p-1.5 border border-white/20 rounded-xl shadow-2xl">
+            <div className="absolute bottom-14 left-6 right-6 sm:left-auto sm:right-12 z-20 flex items-center justify-center sm:justify-end gap-2 sm:gap-3 bg-black/70 backdrop-blur-md p-1 sm:p-1.5 border border-white/20 rounded-xl shadow-2xl">
 
               <motion.button
                 whileHover={{ scale: 1.15 }}
